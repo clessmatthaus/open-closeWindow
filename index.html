@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open & Close window in Js</title>
+</head>
+<style>
+    body {
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    button {
+        background-color: green;
+        color: white;
+        border-radius: 10px;
+        margin: 14px;
+        padding: 14px;
+    }
+    
+    #Close {
+        background-color: red;
+    }
+</style>
+
+<body>
+    <h1 id="titre"> Open & Close window in Javascript</h1>
+    <button id="Open">open new windon</button>
+    <button id="Close">close window</button>
+
+    <script>
+        var Open = document.getElementById('Open');
+        var Close = document.getElementById('Close');
+        var Window = '';
+
+        Open.addEventListener('click', openWindow);
+        Close.addEventListener('click', closeWindow);
+
+
+        function openWindow() {
+
+            Window = open('https://www.google.com/', '_blank ', 'width=700px, height=900px');
+        }
+
+
+        function closeWindow() {
+            Window.close();
+
+        }
+    </script>
+
+</body>
+
+</html>
